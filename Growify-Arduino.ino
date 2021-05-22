@@ -11,7 +11,6 @@ int led9 = 9;
 
 int blinker = 4;
 
-
 boolean flag  = false;
 
 int pinDHT11 = 2;
