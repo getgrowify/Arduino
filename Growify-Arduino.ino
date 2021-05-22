@@ -38,7 +38,6 @@ void loop() {
 
   Serial.println("=================================");
   
-  // read without samples.
   byte temperature = 0;
   byte humidity = 0;
   int err = SimpleDHTErrSuccess;
@@ -48,8 +47,6 @@ void loop() {
   }
   
   Serial.println("Sensors: ");
-//  Serial.print((int)temperature); Serial.print(" *C, "); 
-//  Serial.print((int)humidity); Serial.println(" H");
   Serial.print("Temperature (*C) "); Serial.println((int)temperature);
   Serial.print("Humidity (%) "); Serial.println((int)humidity);
   msvalue = analogRead(msensor);
@@ -58,7 +55,6 @@ void loop() {
   float c = humidity;
 
   float d = (a/1000)*100;
-//  Serial.print("Moisture "); Serial.println(msvalue);
   Serial.print("Moisture (%) "); Serial.println(d);
 
   
@@ -86,17 +82,5 @@ void loop() {
     digitalWrite(led10, LOW);
     digitalWrite(led9, LOW);
   }
-
-  
-
- 
-//
-//  if (humidity > 70) {
-//    Serial.println("Substances: Compost");
-//  } else {
-//    Serial.println("Substances: N / A");
-//  }
-
-    delay(1500);
-
+  delay(1500);
 }
